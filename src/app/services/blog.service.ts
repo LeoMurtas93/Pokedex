@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
-import { Article } from '../models/articles';
+import { Article, NewArticleDto } from '../models/articles';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
@@ -14,4 +14,8 @@ export class BlogService {
   getArticles() : Observable<Article[]>{
     return this.http.get<Article[]>(`${environment.JSON_SERVER_BASE_URL}/article`); 
   } 
+
+  newArticle(model: NewArticleDto): Observable<Article>{
+    return this.http.post<Article>(`${environment.JSON_SERVER_BASE_URL}/article`, model)
+  }
 }

@@ -8,3 +8,14 @@ export type Article = {
     published: boolean;
     text: string;
 }
+
+export class NewArticleDto{
+    constructor(
+        public userId: number,
+        public title: string ="", 
+        public published: boolean = false,
+        public text: string = "",
+    ){
+        
+    }
+}
