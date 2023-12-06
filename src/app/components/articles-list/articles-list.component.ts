@@ -10,7 +10,7 @@ import { BlogService } from 'src/app/services/blog.service';
 export class ArticlesListComponent implements OnInit {
   // se abbiamo errori facciamo ctrl + punto e indovina la soluzione
 
-
+  articoloFinto: Article ={ id: 1, published: true, title: "", text: "", userId: 1 };
   articoli: Article[] = [];
 
 
@@ -19,5 +19,11 @@ export class ArticlesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.blogService.getArticles().subscribe(dati => this.articoli = dati);
+  }
+
+  elimina(id: number){
+    this.blogService.deleteArticoloById(id).subscribe(dati => {
+      this.blogService.getArticles().subscribe(dati => this.articoli = dati);
+    })
   }
 }

@@ -1,5 +1,9 @@
-<pre>
+<!-- <pre>
     {{articoli | json }}
-</pre>
+</pre> -->
+
+<app-article-preview *ngFor="let a of articoli" [article]="a" (onRichiestaEliminazione)="elimina($event)">
+
+</app-article-preview>
 
 <a mat-raised-button color="accent" routerLink="/blog/nuovo">Scrivi nuovo articolo</a>

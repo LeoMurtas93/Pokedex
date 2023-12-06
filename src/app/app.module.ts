@@ -20,7 +20,9 @@ import { ArticleAddComponent } from './components/article-add/article-add.compon
 import{MatFormFieldModule} from "@angular/material/form-field";
 import{MatInputModule} from "@angular/material/input";
 import{MatCheckboxModule} from "@angular/material/checkbox";
-import{MatSelectModule} from "@angular/material/select"
+import{MatSelectModule} from "@angular/material/select";
+import { ArticlePreviewComponent } from './components/article-preview/article-preview.component';
+import { ArticleDetailComponent } from './components/article-detail/article-detail.component'
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import{MatSelectModule} from "@angular/material/select"
     AppComponent,
     MenuComponent,
     ArticlesListComponent,
-    ArticleAddComponent
+    ArticleAddComponent,
+    ArticlePreviewComponent,
+    ArticleDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -18,4 +18,12 @@ export class BlogService {
   newArticle(model: NewArticleDto): Observable<Article>{
     return this.http.post<Article>(`${environment.JSON_SERVER_BASE_URL}/article`, model)
   }
+
+  getArticleById(id: number):Observable <Article>{
+    return this.http.get<Article>(`${environment.JSON_SERVER_BASE_URL}/article/${id}`);
+  }
+
+  deleteArticoloById(id: number):Observable <any>{
+    return this.http.delete<any>(`${environment.JSON_SERVER_BASE_URL}/article/${id}`);
+  }
 }

@@ -1,0 +1,9 @@
+
+<mat-card *ngIf="article">
+    <mat-card-content>{{article.title | uppercase}}
+    </mat-card-content>
+    <mat-card-actions>
+        <a mat-button [routerLink]="['/blog', article.id]">Vai al dettaglio</a>
+        <button mat-button color="warn" (click)="elimina()">Elimina</button>
+    </mat-card-actions>
+</mat-card>
