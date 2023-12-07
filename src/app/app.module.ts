@@ -22,7 +22,13 @@ import{MatInputModule} from "@angular/material/input";
 import{MatCheckboxModule} from "@angular/material/checkbox";
 import{MatSelectModule} from "@angular/material/select";
 import { ArticlePreviewComponent } from './components/article-preview/article-preview.component';
-import { ArticleDetailComponent } from './components/article-detail/article-detail.component'
+import { ArticleDetailComponent } from './components/article-detail/article-detail.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { PokemonsComponent } from './components/pokemons/pokemons.component';
+import { PokemonsListComponent } from './components/pokemons-list/pokemons-list.component';
+import { PokemonsDetailComponent } from './components/pokemons-detail/pokemons-detail.component'
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 
 @NgModule({
@@ -32,7 +38,11 @@ import { ArticleDetailComponent } from './components/article-detail/article-deta
     ArticlesListComponent,
     ArticleAddComponent,
     ArticlePreviewComponent,
-    ArticleDetailComponent
+    ArticleDetailComponent,
+    BlogComponent,
+    PokemonsComponent,
+    PokemonsListComponent,
+    PokemonsDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +58,8 @@ import { ArticleDetailComponent } from './components/article-detail/article-deta
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
